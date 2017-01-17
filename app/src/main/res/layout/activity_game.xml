@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:id="@+id/main_layout">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="23dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:id="@+id/stats_layout"
+        android:layout_marginStart="15dp">
+
+        <TextView
+            android:text="@string/score_textview"
+            android:layout_height="wrap_content"
+            android:id="@+id/score"
+            android:textColor="@android:color/background_light"
+            android:layout_width="wrap_content"
+            android:textColorHighlight="@android:color/background_light"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/score_value"
+            android:textColor="@android:color/background_light"
+            android:textColorHighlight="@android:color/background_light"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="@string/failedAttempts_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/failedAttempts"
+            android:textColor="@android:color/background_light"
+            android:textStyle="normal|bold"
+            android:textColorHighlight="@android:color/background_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/failedAttempts_value"
+            android:textColorHighlight="@android:color/background_light"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gameStatus"
+            android:textColor="@android:color/background_light"
+            android:textStyle="normal|bold" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="26"
+        android:rowCount="2"
+        android:layout_below="@+id/wordToGuess"
+        android:layout_marginTop="30dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:id="@+id/letters_grid"
+        android:minHeight="144dp">
+
+       <!--  <Button
+            android:text="@string/a"
+            android:layout_height="match_parent"
+            android:id="@+id/button_A"
+            android:layout_width="wrap_content"
+            android:minWidth="50dip" /> -->
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/letters_grid"
+        android:id="@+id/wordProposition_layout">
+
+        <TextView
+            android:text="@string/word_proposition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wordProposition_title"
+            android:textColor="@android:color/background_light"
+            android:textStyle="normal|bold"
+            android:textSize="18sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:labelFor="@+id/wordGuessed_edittext" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/wordProposition_title"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:labelFor="@+id/wordValidation_button">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/wordGuessed_edittext"
+                android:textSize="18sp"
+                android:layout_weight="2"
+                android:textColor="@android:color/background_light" />
+
+            <Button
+                android:text="@string/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wordValidation_button"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:text="@string/newGame_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newGame_button"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/stats_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp" />
+
+    <TextView
+        android:text="---------"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/wordToGuess"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:layout_below="@+id/newGame_button"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

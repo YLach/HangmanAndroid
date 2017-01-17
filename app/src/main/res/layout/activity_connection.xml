@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:id="@+id/main_layout">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/serverInformation_layout">
+
+        <TextView
+            android:text="@string/server_info_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/serverInformation_title"
+            android:textStyle="normal|bold"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:padding="10dp"
+            android:rowCount="2"
+            android:saveEnabled="true"
+            android:columnCount="2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/serverInformation_title"
+            android:id="@+id/connectionInfo_layout">
+
+            <TextView
+                android:text="@string/ip_address_textinput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ipAddress_textview"
+                android:textColor="@android:color/background_light"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:layout_marginTop="25dp"
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/ipAddress_edittext"
+                tools:ignore="LabelFor"
+                style="@style/Widget.AppCompat.EditText"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
+
+            <TextView
+                android:text="@string/port_textinput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/port_textview"
+                android:textColor="@android:color/background_light"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:layout_marginTop="25dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"
+                android:ems="10"
+                android:id="@+id/port_edittext"
+                android:maxLines="1"
+                tools:ignore="LabelFor"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                style="@style/Widget.AppCompat.EditText"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
+
+        </GridLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/connection_button"
+            android:text="@string/connect_text"
+            android:layout_below="@+id/connectionInfo_layout"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</LinearLayout>

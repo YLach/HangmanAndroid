@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HangmanGameAndroid</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="connect_text">Connect</string>
+    <string name="ip_address_textinput">IP Address</string>
+    <string name="port_textinput">Port</string>
+    <string name="server_info_textview">Server Information</string>
+    <string name="word_proposition">Word proposition</string>
+    <string name="score_textview">Score:</string>
+    <string name="failedAttempts_textview">Failed attempts:</string>
+    <string name="newGame_text">New Game</string>
+    <string name="ok">Ok</string>
+    <string name="a">A</string>
+</resources>
